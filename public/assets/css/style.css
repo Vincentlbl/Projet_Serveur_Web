@@ -46,7 +46,7 @@ nav .mainMenu li a {
 }
 
 nav .mainMenu li a:hover {
-  background: #444; /* Survol subtil */
+  background: #03362e; /* Survol subtil */
   transform: scale(1.1); /* Zoom léger */
 }
 
