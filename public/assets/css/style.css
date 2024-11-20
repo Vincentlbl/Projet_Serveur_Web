@@ -1,0 +1,37 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #121212; /* Mode sombre */
+    color: #e0e0e0; /* Texte clair pour contraste */
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: linear-gradient(90deg, #212121, #333); /* Gradient subtil */
+  }
+  
+  header a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  nav .mainMenu {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
