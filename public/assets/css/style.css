@@ -196,3 +196,21 @@ main {
 #carousel {
   transition: transform 0.5s ease-in-out;
 }
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+  min-width: 100%;
+  object-fit: cover;
+}
