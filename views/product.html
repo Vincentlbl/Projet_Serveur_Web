@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Détail produit</title>
   <link rel="stylesheet" href="/public/assets/css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -15,8 +16,6 @@
       <ul class="mainMenu">
         <li><a href="/index.html">Accueil</a></li>
         <li><a href="/views/catalog.html">Catalogue</a></li>
-        <li>
-        </li>
         <li><a href="/views/login.html">Connexion</a></li>
         <li><a href="/views/register.html">Inscription</a></li>
         <li><a href="/views/cart.html">Panier</a></li>
@@ -24,13 +23,16 @@
     </nav>
   </header>
 
-
-  <main>
-    <h2>Détails du produit</h2>
-    <img src="public/assets/images/products/product1.jpg" alt="Produit 1">
-    <p>Description : Ce produit est incroyable !</p>
-    <p>Prix : 29,99€</p>
-    <button>Ajouter au panier</button>
+  <main class="product-detail">
+    <div class="product-container">
+      <img src="/public/assets/images/andrey-zvyagintsev-2HCVNKMZtVk-unsplash.jpg" alt="Produit 1" class="product-image">
+      <div class="product-info">
+        <h2>Produit 1</h2>
+        <p class="product-description">Ce produit est incroyable, parfait pour vos besoins quotidiens. Il est durable, élégant, et disponible à un prix attractif.</p>
+        <p class="product-price">Prix : 29,99€</p>
+        <button class="add-to-cart">Ajouter au panier</button>
+      </div>
+    </div>
   </main>
 </body>
 

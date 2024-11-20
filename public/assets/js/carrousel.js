@@ -1,16 +1,10 @@
-const track = document.querySelector('.carousel-track');
-const images = document.querySelectorAll('.carousel-image');
+const carousel = document.getElementById('carousel');
+let index = 0;
 
-let currentIndex = 0;
-
-function moveToNextImage() {
-  currentIndex++;
-  if (currentIndex >= images.length) {
-    currentIndex = 0; // Revenir à la première image
-  }
-  const newTransform = `translateX(-${currentIndex * 100}%)`;
-  track.style.transform = newTransform;
+function moveCarousel() {
+  index++;
+  if (index > 2) index = 0; // Revenir au début après la dernière image
+  carousel.style.transform = `translateX(-${index * 100}%)`;
 }
 
-// Défilement automatique toutes les 3 secondes
-setInterval(moveToNextImage, 3000);
+setInterval(moveCarousel, 3000); // Défiler toutes les 3 secondes

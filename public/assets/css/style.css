@@ -119,3 +119,86 @@ main {
   min-width: 100%; /* Chaque image prend toute la largeur du carrousel */
   object-fit: cover; /* Coupe les images pour qu'elles s'adaptent bien */
 }
+
+/* Supprime le soulignement des liens pour les produits */
+.product a {
+  text-decoration: none;
+  color: inherit; /* Conserve la couleur du texte actuelle */
+  display: block; /* Permet de cliquer sur tout le contenu */
+  text-align: center; /* Centrer le texte sous l'image */
+}
+
+.product a:hover {
+  transform: scale(1.05); /* Zoom sur le produit au survol */
+  transition: transform 0.3s ease-in-out;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+/* Styles pour la fiche produit */
+.product-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 10%;
+  background-color: #121212; /* Fond sombre */
+}
+
+.product-container {
+  display: flex;
+  gap: 20px;
+  max-width: 800px;
+  background-color: #212121; /* Fond du conteneur produit */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.product-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-info h2 {
+  margin-bottom: 10px;
+  font-size: 1.8em;
+  color: #e0e0e0;
+}
+
+.product-description {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.product-price {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #ffcc00; /* Couleur du prix */
+}
+
+.add-to-cart {
+  padding: 10px 20px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
