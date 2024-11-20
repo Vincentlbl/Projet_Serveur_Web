@@ -54,3 +54,49 @@ nav .mainMenu li a:hover {
 main {
   padding: 20px;
 }
+
+
+/* Grille de produits */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+  gap: 20px; /* Espacement entre les éléments */
+  padding: 20px 10%;
+}
+
+.product {
+  text-align: center;
+  background-color: #212121; /* Fond sombre pour chaque produit */
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product img {
+  width: 100%; /* Image responsive */
+  max-height: 150px; /* Limite de hauteur */
+  object-fit: cover; /* Coupe les images pour qu'elles rentrent dans le cadre */
+  border-radius: 5px; /* Coins arrondis */
+}
+
+.product p {
+  margin-top: 10px;
+}
+
+.product:hover {
+  transform: scale(1.05); /* Zoom au survol */
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1); /* Ombre légère au survol */
+}
+
+
+/* Style pour l'icône du panier */
+.cart-icon img {
+  width: 24px; /* Taille de l'icône */
+  height: 24px;
+  filter: invert(100%); /* Convertit les couleurs pour correspondre au thème sombre */
+  transition: transform 0.3s ease;
+}
+
+.cart-icon img:hover {
+  transform: scale(1.2); /* Zoom léger au survol */
+}

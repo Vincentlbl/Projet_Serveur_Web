@@ -4,14 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catalogue</title>
-  <link rel="stylesheet" href="public/assets/css/style.css">
+  <link rel="stylesheet" href="/public/assets/css/style.css">
 </head>
 <body>
   <header>
     <a href="index.html" class="logo">E-commerce</a>
     <nav>
       <ul class="mainMenu">
-        <li><a href="index.html">Accueil</a></li>
+        <li><a href="/index.html">Accueil</a></li>
+        <li><a href="/views/catalog.html">Catalogue</a></li>
+        <li><a href="/views/product.html">Produit</a></li>
+        <li>
+          <a href="cart.html" class="cart-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="Panier">
+          </a>
+        </li>
         <li><a href="login.html">Connexion</a></li>
         <li><a href="register.html">Inscription</a></li>
       </ul>
@@ -20,11 +27,16 @@
 
   <main>
     <h2>Catalogue</h2>
-    <div class="catalog">
-      <div>
+    <section class="product-grid">
+      <div class="product">
         <img src="public/assets/images/products/product1.jpg" alt="Produit 1">
         <p>Produit 1 - 29,99€</p>
       </div>
-      <div>
+      <div class="product">
         <img src="public/assets/images/products/product2.jpg" alt="Produit 2">
-        <
+        <p>Produit 2 - 39,99€</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
