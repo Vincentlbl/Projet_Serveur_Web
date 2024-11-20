@@ -1,10 +1,9 @@
-/* Global styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #121212; /* Mode sombre */
-  color: #e0e0e0; /* Texte clair pour contraste */
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 body {
@@ -46,36 +45,34 @@ nav .mainMenu li a {
 }
 
 nav .mainMenu li a:hover {
-  background: #03362e; /* Survol subtil */
-  transform: scale(1.1); /* Zoom léger */
+  background: #03362e;
+  transform: scale(1.1);
 }
 
 main {
   padding: 20px;
 }
 
-
-/* Grille de produits */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
-  gap: 20px; /* Espacement entre les éléments */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   padding: 20px 10%;
 }
 
 .product {
   text-align: center;
-  background-color: #212121; /* Fond sombre pour chaque produit */
+  background-color: #212121;
   padding: 15px;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product img {
-  width: 100%; /* Image responsive */
-  max-height: 150px; /* Limite de hauteur */
-  object-fit: cover; /* Coupe les images pour qu'elles rentrent dans le cadre */
-  border-radius: 5px; /* Coins arrondis */
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .product p {
@@ -83,53 +80,48 @@ main {
 }
 
 .product:hover {
-  transform: scale(1.05); /* Zoom au survol */
-  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1); /* Ombre légère au survol */
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
 }
 
-
-/* Style pour l'icône du panier */
 .cart-icon img {
-  width: 24px; /* Taille de l'icône */
+  width: 24px;
   height: 24px;
-  filter: invert(100%); /* Convertit les couleurs pour correspondre au thème sombre */
+  filter: invert(100%);
   transition: transform 0.3s ease;
 }
 
 .cart-icon img:hover {
-  transform: scale(1.2); /* Zoom léger au survol */
+  transform: scale(1.2);
 }
 
-
-/* Styles pour le carrousel */
 .carousel {
-  overflow: hidden; /* Cache les images qui débordent */
+  overflow: hidden;
   width: 100%;
-  max-width: 800px; /* Largeur maximale du carrousel */
-  margin: 20px auto; /* Centrer le carrousel */
+  max-width: 800px;
+  margin: 20px auto;
   border-radius: 10px;
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease-in-out; /* Animation pour le défilement */
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-image {
-  min-width: 100%; /* Chaque image prend toute la largeur du carrousel */
-  object-fit: cover; /* Coupe les images pour qu'elles s'adaptent bien */
+  min-width: 100%;
+  object-fit: cover;
 }
 
-/* Supprime le soulignement des liens pour les produits */
 .product a {
   text-decoration: none;
-  color: inherit; /* Conserve la couleur du texte actuelle */
-  display: block; /* Permet de cliquer sur tout le contenu */
-  text-align: center; /* Centrer le texte sous l'image */
+  color: inherit;
+  display: block;
+  text-align: center;
 }
 
 .product a:hover {
-  transform: scale(1.05); /* Zoom sur le produit au survol */
+  transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -138,21 +130,19 @@ main {
   border-radius: 8px;
 }
 
-
-/* Styles pour la fiche produit */
 .product-detail {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 40px 10%;
-  background-color: #121212; /* Fond sombre */
+  background-color: #121212;
 }
 
 .product-container {
   display: flex;
   gap: 20px;
   max-width: 800px;
-  background-color: #212121; /* Fond du conteneur produit */
+  background-color: #212121;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
@@ -162,6 +152,7 @@ main {
   width: 300px;
   height: auto;
   border-radius: 10px;
+  opacity: 0.33;
 }
 
 .product-info {
@@ -184,7 +175,7 @@ main {
 .product-price {
   font-size: 1.5em;
   margin-bottom: 20px;
-  color: #ffcc00; /* Couleur du prix */
+  color: #ffffff;
 }
 
 .add-to-cart {
@@ -201,4 +192,8 @@ main {
 .add-to-cart:hover {
   background-color: #555;
   transform: scale(1.05);
+}
+
+#carousel {
+  transition: transform 0.5s ease-in-out;
 }

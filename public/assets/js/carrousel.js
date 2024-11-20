@@ -2,9 +2,13 @@ const carousel = document.getElementById('carousel');
 let index = 0;
 
 function moveCarousel() {
+  const images = document.querySelectorAll('#carousel img');
   index++;
-  if (index > 2) index = 0; // Revenir au début après la dernière image
+  if (index >= images.length) {
+    index = 0; 
+  }
   carousel.style.transform = `translateX(-${index * 100}%)`;
 }
 
-setInterval(moveCarousel, 3000); // Défiler toutes les 3 secondes
+
+setInterval(moveCarousel, 3000);
