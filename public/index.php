@@ -5,23 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accueil</title>
-  <link rel="stylesheet" href="public/assets/css/style.css">
+  <link rel="stylesheet" href="/public/assets/css/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-  <header>
-    <a href="index.html" class="logo">E-commerce</a>
-    <nav>
-      <ul class="mainMenu">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="/views/catalog.html">Catalogue</a></li>
-        <li><a href="/views/login.html">Connexion</a></li>
-        <li><a href="/views/register.html">Inscription</a></li>
-        <li><a href="/views/cart.html">Panier</a></li>
-      </ul>
-    </nav>
-  </header>
+  <?php require_once __DIR__ . '../src/views/partials/header.php'; ?>
 
   <main>
     <h1>Bienvenue sur notre site e-commerce</h1>
@@ -63,6 +52,8 @@
       setInterval(moveCarousel, 3000);
     </script>
   </main>
+
+  <?php require_once __DIR__ . '/'; ?>
 </body>
 
 </html>
