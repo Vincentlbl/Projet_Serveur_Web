@@ -1,6 +1,6 @@
 # Projet Serveur Web - E-commerce
 
-Ce projet est une plateforme de commerce en ligne simple, permettant de gérer un catalogue de produits avec un systeme de tri par prix, un panier, ainsi que l'inscription et la connexion des utilisateurs.
+Ce projet est une plateforme de commerce en ligne simple, permettant de gérer un catalogue de produits avec un systeme de tri par prix  , un panier, ainsi que l'inscription et la connexion des utilisateurs.
 
 ## Prérequis
 
