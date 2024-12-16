@@ -2,14 +2,13 @@
 
 namespace App\Models;
 
-// Classe abstraite pour factoriser les propriétés communes
 abstract class CoreModel
 {
     protected $id;
     protected $created_at;
     protected $updated_at;
 
-    // Getter et setter pour `id`
+    // Getters et setters
     public function getId()
     {
         return $this->id;
@@ -20,7 +19,6 @@ abstract class CoreModel
         $this->id = $id;
     }
 
-    // Getter et setter pour `created_at`
     public function getCreatedAt()
     {
         return $this->created_at;
@@ -31,7 +29,6 @@ abstract class CoreModel
         $this->created_at = $created_at;
     }
 
-    // Getter et setter pour `updated_at`
     public function getUpdatedAt()
     {
         return $this->updated_at;

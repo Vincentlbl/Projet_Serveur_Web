@@ -17,14 +17,14 @@ class Product
     private $brand_id;
     private $category_id;
     private $type_id;
-    private $created_at; // Ajouté
-    private $updated_at; // Ajouté
+    private $created_at; 
+    private $updated_at; 
 
     public function findAll()
     {
         $pdo = Database::getPDO();
         $stmt = $pdo->query("SELECT * FROM product");
-        $products = $stmt->fetchAll(PDO::FETCH_CLASS, 'App\Models\Product');  // Utiliser PDO::FETCH_CLASS pour récupérer des objets
+        $products = $stmt->fetchAll(PDO::FETCH_CLASS, 'App\Models\Product');  
         return $products;
     }
     
@@ -39,7 +39,7 @@ class Product
         $stmt = $pdo->prepare($query);
         $stmt->bindParam(':id', $id);
         $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC); // Utiliser fetch pour obtenir un tableau associatif
+        return $stmt->fetch(PDO::FETCH_ASSOC); 
     }
 
 
@@ -95,13 +95,13 @@ class Product
     public function getCreatedAt()
     {
         return $this->created_at;
-    } // Ajouté
+    } 
     public function getUpdatedAt()
     {
         return $this->updated_at;
-    } // Ajouté
+    } 
 
-    // Setters
+
     public function setName($name)
     {
         $this->name = $name;
@@ -141,9 +141,9 @@ class Product
     public function setCreatedAt($createdAt)
     {
         $this->created_at = $createdAt;
-    } // Ajouté
+    } 
     public function setUpdatedAt($updatedAt)
     {
         $this->updated_at = $updatedAt;
-    } // Ajouté
+    } 
 }

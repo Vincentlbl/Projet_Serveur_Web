@@ -1,9 +1,7 @@
 <?php
 
-// Retirez "use AltoRouter" si vous utilisez "\AltoRouter" directement
 $router = new \AltoRouter();
 
-// Définir le chemin de base
 $basePath = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
 $router->setBasePath($basePath);
 
@@ -21,7 +19,5 @@ $router->map('GET|POST', '/cart', 'App\Controllers\MainController#cart', 'cart')
 $router->map('POST', '/cart?action=remove', 'App\Controllers\MainController#removeFromCart', 'cart_remove'); // Supprimer un produit
 $router->map('POST', '/cart?action=applyPromo', 'App\Controllers\MainController#applyPromo', 'cart_promo'); // Appliquer un code promo
 
-// Route pour valider le panier
-$router->map('POST', '/checkout', 'App\Controllers\MainController#checkout', 'checkout');
 
 return $router;

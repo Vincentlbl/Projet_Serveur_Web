@@ -14,7 +14,12 @@
     </div>
     <div class="row">
         <?php
-        // Tri des produits en fonction du paramètre 'sort'
+
+
+
+        // Tri des produits en fonction du prix (croissant ou décroissant)
+
+
         if (isset($_GET['sort'])) {
             if ($_GET['sort'] == 'asc') {
                 usort($products, function($a, $b) {
@@ -33,7 +38,7 @@
                     <div class="product-image">
                         <a href="<?= BASE_URL ?>product?id=<?= $product->getId() ?>">
                             <img src="<?= BASE_URL ?>/assets<?= $product->getPicture() ?>" alt="<?= $product->getName() ?>" class="img-fluid">
-                            <p class="product-description"><?= htmlspecialchars($product->getDescription()) ?></p> <!-- Affichage de la description -->
+                            <p class="product-description"><?= htmlspecialchars($product->getDescription()) ?></p>
 
                         </a>
                     </div>
