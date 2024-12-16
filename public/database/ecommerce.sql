@@ -7,11 +7,13 @@ USE ecommerce;
 CREATE TABLE users (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    UNIQUE KEY (email(191))
 );
+
 
 -- Table product
 
@@ -53,7 +55,6 @@ CREATE TABLE carousel_images (
 
 
 -- Données de la table product
-
 INSERT INTO product (name, description, picture, price) VALUES
 ('RTX 4070', 'Carte Graphique RTX 4070', '/assets/images/cg.jpg', 999.99),
 ('RX 7900 XTX', 'Carte Graphique RX 7900 XTX', '/assets/images/cg2.jpg', 999.99),

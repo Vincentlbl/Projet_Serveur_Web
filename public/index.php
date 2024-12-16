@@ -1,7 +1,7 @@
 <?php
 
-// Dans index.php ou config.php
-define('BASE_URL', rtrim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/');
+
+// Détecte automatiquement la base URL en fonction de l'arborescence
 
 // Inclure l'autoloader généré par Composer
 require_once __DIR__ . '/../vendor/autoload.php';
