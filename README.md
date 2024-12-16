@@ -1,12 +1,11 @@
-# Site_Web
-
-# Pages du site d’e-commerce
-
-**Il faut faire le HTML et le CSS pour chacune de ces pages (pas de php pour l’instant)**
-
-- Page d’accueil
-- Page de connexion
-- Page d’inscription (création de compte)
-- Page de catalogue (tous les produits listés)
-- Page produit détail
-- Page panier
+Il faut :
+```bash
+sudo nano /etc/apache2/sites-available/000-default.conf
+```
+Puis
+```
+# chemin absolu du dossier
+<Directory /var/www/html/crepe_waou/public>
+    AllowOverride All
+</Directory>
+```

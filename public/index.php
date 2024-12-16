@@ -1,59 +1,32 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accueil</title>
-  <link rel="stylesheet" href="/public/assets/css/style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
+// Dans index.php ou config.php
+define('BASE_URL', rtrim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/');
 
-<body>
-  <?php require_once __DIR__ . '../src/views/partials/header.php'; ?>
+// Inclure l'autoloader généré par Composer
+require_once __DIR__ . '/../vendor/autoload.php';
 
-  <main>
-    <h1>Bienvenue sur notre site e-commerce</h1>
+// Charger les routes depuis le fichier routes.php
+$router = require_once __DIR__ . '/../src/router/routes.php';
 
-    <!-- Section Carrousel -->
-    <section class="carousel">
-      <div class="carousel-track" id="carousel">
-        <img src="/public/assets/images/andrey-zvyagintsev-2HCVNKMZtVk-unsplash.jpg" alt="Produit 1"
-          class="carousel-image">
-        <img src="/public/assets/images/kevin-laminto-0ZPlUMo2lis-unsplash.jpg" alt="Produit 2"
-          class="carousel-image">
-        <img src="/public/assets/images/cesar-la-rosa-HbAddptme1Q-unsplash.jpg" alt="Produit 3" class="carousel-image">
+// Correspondance de la route actuelle
+$match = $router->match();
 
-        <img src="/public/assets/images/khaled-ghareeb-QN507MdnxRQ-unsplash.jpg" alt="Produit 4" class="carousel-image">
-
-        <img src="/public/assets/images/kevin-laminto-07wBhL5WqgI-unsplash.jpg" alt="Produit 5" class="carousel-image">
-      
-
-      </div>
-
-
-
-    </section>
-
-    <script>
-      const carousel = document.getElementById('carousel');
-      let index = 0;
-
-      function moveCarousel() {
-        const images = document.querySelectorAll('.carousel-image');
-        index++;
-        if (index >= images.length) {
-          index = 0;
-        }
-        const translateValue = -index * 100;
-        carousel.style.transform = `translateX(${translateValue}%)`;
-      }
-
-      setInterval(moveCarousel, 3000);
-    </script>
-  </main>
-
-  <?php require_once __DIR__ . '/'; ?>
-</body>
-
-</html>
+if ($match) {
+    // Extraire le contrôleur et la méthode de la cible
+    [$controllerClass, $method] = explode('#', $match['target']);
+    
+    // Vérifier si la classe et la méthode existent
+    if (class_exists($controllerClass) && method_exists($controllerClass, $method)) {
+        $controller = new $controllerClass();
+        call_user_func_array([$controller, $method], $match['params']);
+    } else {
+        // Classe ou méthode non trouvée
+        http_response_code(404);
+        echo "Erreur 404 - Contrôleur ou méthode introuvable.";
+    }
+} else {
+    // Route non correspondante
+    http_response_code(404);
+    echo "Erreur 404 - Page introuvable.";
+}
