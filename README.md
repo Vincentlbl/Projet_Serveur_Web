@@ -1,11 +1,19 @@
-Il faut :
-```bash
-sudo nano /etc/apache2/sites-available/000-default.conf
-```
-Puis
-```
-# chemin absolu du dossier
-<Directory /var/www/html/crepe_waou/public>
-    AllowOverride All
-</Directory>
-```
+# Projet Serveur Web - E-commerce
+
+Ce projet est une plateforme de commerce en ligne simple, permettant de gérer un catalogue de produits avec un systeme de trie de prix, un panier, ainsi que l'inscription et la connexion des utilisateurs.
+
+## Prérequis
+
+- Installer [WampServer](https://www.wampserver.com/) ou tout autre serveur local (WAMP, XAMPP ou MANP.).
+- Taper dans le terminal : composer install
+- Créer la bdd à partir des données du fichier /database/ecommerce.sql (mySQL PhPmyAdmin par exemple)
+- Accédez à `http://localhost/` pour tester le projet.
+
+---
+
+## Étapes d'installation
+
+1. **Clonez ce dépôt ou téléchargez-le** :
+   ```bash
+   git clone https://github.com/votre-utilisateur/projet-serveur-web.git
+   cd projet-serveur-web
