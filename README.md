@@ -15,5 +15,5 @@ Ce projet est une plateforme de commerce en ligne simple, permettant de gérer u
 
 1. **Clonez ce dépôt ou téléchargez-le** :
    ```bash
-   git clone https://github.com/votre-utilisateur/projet-serveur-web.git
+   git clone https://github.com/Vincentlbl/Projet_Serveur_Web.git
    cd projet-serveur-web
