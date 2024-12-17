@@ -6,7 +6,7 @@ Ce projet est une plateforme de commerce en ligne simple, permettant de gérer u
 
 - Installer [WampServer](https://www.wampserver.com/) ou tout autre serveur local (WAMP, XAMPP ou MANP.).
 - Créer la bdd à partir des données du fichier /database/ecommerce.sql (mySQL PhPmyAdmin par exemple)
-- Accédez à `http://localhost/` pour tester le projet.
+
 
 ---
 
@@ -16,4 +16,5 @@ Ce projet est une plateforme de commerce en ligne simple, permettant de gérer u
    ```bash
    git clone git@github.com:Vincentlbl/Projet_Serveur_Web.git
    cd projet-serveur-web
-- Taper dans le terminal la commande : composer install
+2. Taper dans le terminal la commande : composer install
+3. Accédez à `http://localhost/` pour tester le projet
