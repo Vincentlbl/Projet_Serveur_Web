@@ -16,6 +16,6 @@ Ce projet est une plateforme de commerce en ligne simple, permettant de gérer u
 1. **Clonez ce dépôt ou téléchargez-le** :
    ```bash
    git clone https://github.com/Vincentlbl/Projet_Serveur_Web.git
-   cd projet-serveur-web
+   cd  cd .\Projet_Serveur_Web\
 2. Taper dans le terminal la commande : composer install
 3. Accédez à `http://localhost/` pour tester le projet
