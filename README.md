@@ -5,6 +5,7 @@ Ce projet est une plateforme de commerce en ligne simple, permettant de gérer u
 ## Prérequis
 
 - Installer [WampServer](https://www.wampserver.com/) ou tout autre serveur local (WAMP, XAMPP ou MANP.).
+- Installer [Composer](https://getcomposer.org/)
 - Créer la bdd à partir des données du fichier /database/ecommerce.sql (mySQL PhPmyAdmin par exemple)
 
 
