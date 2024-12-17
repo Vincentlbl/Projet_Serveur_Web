@@ -1,10 +1,8 @@
 RewriteEngine On
 
-# Détecte dynamiquement le dossier de base
 RewriteCond %{REQUEST_URI} !index.php$
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ index.php [QSA,L]
 
-# Définit une variable d'environnement dynamique pour BASE_URI
 SetEnvIf Request_URI ^(.*)$ BASE_URI=$1
